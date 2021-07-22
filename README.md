@@ -1,4 +1,4 @@
-# Maristella's Sample Shop: Ecommerce Website With Django + React
+# Maristella's Sample Shop: Ecommerce Website (Django + React)
 
 Live website: https://maristellas.herokuapp.com/#/
 
@@ -10,9 +10,18 @@ Hence, this project involved modifying the tutorial's website to be more appropr
 
 ![SampleHome](https://github.com/hyunseo6579/maristellas-sample-shop/blob/master/resources/SampleHome.png)
 
-# Features From Tutorial
-
-# Features Newly Added
+# Features
+- Released product's carousel
+- Shopping cart for released products
+- Product description page for current and past releases
+- Admin product management
+- Admin user management
+- Admin order detail management
+- Checkout process
+- Registration and login process
+- Customer profile page with order details
+- Admin's option to mark order delivered
+- Customer's option to mark order as paid (etransfer)
 
 # Setup Instructions
 1. Clone the project
