@@ -1,59 +1,47 @@
-import React from 'react'
-import {Nav, ProgressBar, Row, Col} from 'react-bootstrap';
-import {LinkContainer} from 'react-router-bootstrap';
+import React from "react";
+import { Nav, ProgressBar, Row, Col } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
-function CheckoutSteps({step1, step2, step3, step4}) {
-
+function CheckoutSteps({ step1, step2, step3 }) {
   return (
-    <div className='mb-4'>
+    <div className="mb-4">
       <Row className="d-flex justify-content-start">
-        <Col> {
-          step1 ? (
-            <LinkContainer to='/login'>
+        <Col>
+          {" "}
+          {step1 ? (
+            <LinkContainer to="/login">
               <Nav.Link>Login</Nav.Link>
             </LinkContainer>
           ) : (
             <Nav.Link disabled>Login</Nav.Link>
-          )
-        } </Col>
+          )}{" "}
+        </Col>
 
-        <Col> {
-          step2 ? (
-            <LinkContainer to='/shipping'>
+        <Col>
+          {" "}
+          {step2 ? (
+            <LinkContainer to="/shipping">
               <Nav.Link>Shipping</Nav.Link>
             </LinkContainer>
           ) : (
             <Nav.Link disabled>Shipping</Nav.Link>
-          )
-        } </Col>
+          )}{" "}
+        </Col>
 
-        <Col> {
-          step3 ? (
-            <LinkContainer to='/payment'>
-              <Nav.Link>Payment</Nav.Link>
-            </LinkContainer>
-          ) : (
-            <Nav.Link disabled>Payment</Nav.Link>
-          )
-        } </Col>
-
-        <Col> {
-          step4 ? (
-            <LinkContainer to='/placeorder'>
+        <Col>
+          {" "}
+          {step3 ? (
+            <LinkContainer to="/placeorder">
               <Nav.Link>Place Order</Nav.Link>
             </LinkContainer>
           ) : (
             <Nav.Link disabled>Place Order</Nav.Link>
-          )
-        } </Col>
+          )}{" "}
+        </Col>
       </Row>
-      <ProgressBar striped variant="info"
-        now={
-          step4 ? 75 : step3 ? 50 : step2 ? 25 : 0
-        }/>
+      <ProgressBar striped variant="info" now={step3 ? 66 : step2 ? 33 : 0} />
     </div>
-
-  )
+  );
 }
 
-export default CheckoutSteps
+export default CheckoutSteps;
